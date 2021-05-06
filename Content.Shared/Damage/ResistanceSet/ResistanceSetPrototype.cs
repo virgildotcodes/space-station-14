@@ -20,18 +20,18 @@ namespace Content.Shared.Damage.ResistanceSet
         private readonly IPrototypeManager _prototypeManager = default!;
 
         [ViewVariables]
-        [field: DataField("coefficients")]
-        public Dictionary<DamageTypePrototype, float> Coefficients { get; } = new();
+        [DataField("coefficients")]
+        public Dictionary<DamageType, float> Coefficients { get; } = new();
 
         [ViewVariables]
-        [field: DataField("flatReductions")]
-        public Dictionary<DamageTypePrototype, int> FlatReductions { get; } = new();
+        [DataField("flatReductions")]
+        public Dictionary<DamageType, int> FlatReductions { get; } = new();
 
         [ViewVariables]
         public Dictionary<DamageTypePrototype, ResistanceSetSettings> Resistances { get; private set; } = new();
 
         [ViewVariables]
-        [field: DataField("id", required: true)]
+        [DataField("id", required: true)]
         public string ID { get; } = default!;
 
         void ISerializationHooks.AfterDeserialization()

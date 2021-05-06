@@ -3,10 +3,8 @@ using Content.Server.GameObjects.Components.Mobs;
 using Content.Shared.Damage;
 using Content.Shared.GameObjects.Components.Damage;
 using Content.Shared.GameObjects.Components.Projectiles;
-using Robust.Server.GameObjects;
 using Robust.Shared.Audio;
 using Robust.Shared.GameObjects;
-using Robust.Shared.Physics;
 using Robust.Shared.Physics.Collision;
 using Robust.Shared.Physics.Dynamics;
 using Robust.Shared.Player;
@@ -33,7 +31,7 @@ namespace Content.Server.GameObjects.Components.Projectiles
             set => _damageTypes = value;
         }
 
-        [field: DataField("deleteOnCollide")]
+        [DataField("deleteOnCollide")]
         public bool DeleteOnCollide { get; } = true;
 
         // Get that juicy FPS hit sound

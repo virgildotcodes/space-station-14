@@ -29,7 +29,7 @@ namespace Content.Shared.Damage.DamageContainer
         [ViewVariables] public IReadOnlyCollection<DamageTypePrototype> SupportedTypes => _supportedTypes;
 
         [ViewVariables]
-        [field: DataField("id", required: true)]
+        [DataField("id", required: true)]
         public string ID { get; } = default!;
 
         void ISerializationHooks.AfterDeserialization()
